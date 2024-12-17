@@ -37,16 +37,20 @@ function getComputerChoice(max) {
 let humanScore = 0;
 let computerScore = 0;
 
-// Outcome calculation
-function playRound(humanChoice, computerChoice) {
-    if ((humanChoice == "papier" && computerChoice == 1) || 
-        (humanChoice == "steen" && computerChoice == 2) || 
-        (humanChoice == "schaar" && computerChoice == 3)) {
-            return 'draw'}
+  // Outcome calculation
+function playRound() {
+    if        (humanChoice == 'papier' && computerChoice == 1) {
+        return 'draw'} 
+    else if   (humanChoice == 'steen' && computerChoice == 2) {
+        return 'draw'} 
+    else if   (humanChoice == 'schaar' && computerChoice == 3) {
+        return 'draw'}
 
-    else if ((humanChoice == "papier" && computerChoice == 2) || 
-        (humanChoice == "steen" && computerChoice == 3) || 
-        (humanChoice == "schaar" && computerChoice == 1)) {
+    else if (humanChoice == 'papier' && computerChoice == 2) {
+        return 'win'} 
+    else if (humanChoice == 'steen' && computerChoice == 3) {
+        return 'win'} 
+    else if (humanChoice == 'schaar' && computerChoice == 1) {
         return 'win'}
 
     else {
