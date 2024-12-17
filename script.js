@@ -1,16 +1,22 @@
-let person = prompt("Pick Paper, Rock or Scissors").toLowerCase();
-
+// HUMAN CHOICE DONE
 function getHumanChoice() {
-if ( person === 'paper' || person === 'rock' || person === 'scissors')
-    {return proceed} else {
-
+if ( person === 'paper' ) 
+    return "papier";
+ else if (person === 'rock') 
+    return "steen";
+ else if (person === 'scissors') 
+    return "schaar";
+    
+else
     alert("Invalid choice. Please enter 'rock', 'paper', or 'scissors'.");
-    // I need to have a loop here somewhere so that it keeps looping untill a correct input is given. Can i do it in this block of code or do I need to create a new block?
-    return wrong }
+    return 'wrong';
 }
 
-while (i === wrong)
-    { prompt("Pick Paper, Rock or Scissors").toLowerCase(); }
+// Loop untill correct answer is given
+do {
+   person = prompt("Pick Paper, Rock or Scissors").toLowerCase();  
+}
+while (getHumanChoice() === 'wrong' ) 
 
 console.log(getHumanChoice());
 
