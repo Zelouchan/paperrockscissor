@@ -5,8 +5,12 @@ if ( person === 'paper' || person === 'rock' || person === 'scissors')
     {return proceed} else {
 
     alert("Invalid choice. Please enter 'rock', 'paper', or 'scissors'.");
-    return  prompt("Pick Paper, Rock or Scissors").toLowerCase(); }
+    // I need to have a loop here somewhere so that it keeps looping untill a correct input is given. Can i do it in this block of code or do I need to create a new block?
+    return wrong }
 }
+
+while (i === wrong)
+    { prompt("Pick Paper, Rock or Scissors").toLowerCase(); }
 
 console.log(getHumanChoice());
 
