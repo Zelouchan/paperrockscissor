@@ -1,20 +1,22 @@
-let person = prompt("Pick Paper, Rock or Scissors");
+let person = prompt("Pick Paper, Rock or Scissors").toLowerCase();
 
 function getHumanChoice() {
-return (response() === rock || paper || scissors || Paper || Rock || Scissors) ? proceed : prompt("Pick Paper, Rock or Scissors");
+if ( person === 'paper' || person === 'rock' || person === 'scissors')
+    {return proceed} else {
+
+    alert("Invalid choice. Please enter 'rock', 'paper', or 'scissors'.");
+    return  prompt("Pick Paper, Rock or Scissors").toLowerCase(); }
 }
 
 console.log(getHumanChoice());
 
-
+// COMPUTER CHOICE - Done
 function getComputerChoice(max) {
     return Math.floor(Math.random() * 3) + 1;
   }
 
   function value() {
     const result = getComputerChoice();
-
-    
 
     if (result === 1)
         return "Paper";
@@ -23,10 +25,6 @@ function getComputerChoice(max) {
     else (result === 3)
         return "Scissors";
   }
-console.log(value());
-
-console.log(response());
-
 
 
 
