@@ -18,7 +18,7 @@ do {
 }
 while (getHumanChoice() === 'wrong' ) 
 
-console.log(getHumanChoice());
+// console.log(getHumanChoice());
 
 // COMPUTER CHOICE - Done
 function getComputerChoice(max) {
@@ -36,6 +36,33 @@ function getComputerChoice(max) {
         return "Scissors";
   }
 
+let humanScore = 0;
+let computerScore = 0;
+
+// Outcome calculation
+function playRound(humanChoice, computerChoice) {
+    if ((humanChoice === 'papier' && computerChoice === 1) || 
+        (humanChoice === 'steen' && computerChoice === 2) || 
+        (humanChoice === 'schaar' && computerChoice === 3)) {
+            return 'draw'}
+
+    else if ((humanChoice === 'papier' && computerChoice === 2) || 
+    (humanChoice === 'steen' && computerChoice === 3) || 
+    (humanChoice === 'schaar' && computerChoice === 1)) {
+        return 'win'}
+
+    else {
+        return 'lose'}
+  }
+  
+  const humanChoice = getHumanChoice();
+  const computerChoice = getComputerChoice();
+  
+  playRound(humanChoice, computerChoice);
+
+  console.log("You played " + person);
+  console.log("Computer played " + value());
+  console.log(playRound());
 
 
 
