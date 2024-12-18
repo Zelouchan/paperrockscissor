@@ -27,11 +27,11 @@ function getComputerChoice() {
     const result = computerChoice;
 
     if (result == 1)
-        return "Paper";
+        return "paper";
     else if (result == 2)
-        return "Rock";
+        return "pock";
     else (result == 3)
-        return "Scissors";
+        return "scissors";
   }
 
 let humanScore = 0;
@@ -66,25 +66,25 @@ function playRound() {
   console.log("You played " + person);
   console.log("Computer played " + value());
 
-  console.log("You " + playRound() + "!");
+//   console.log("You " + playRound() + "!");
 
 
-//   // figure out how to display function in message
-//   function message() {
-//     if    (playRound() == 'draw') {
-//         return "It is a draw! Try again"
-//     }
+  // figure out how to display function in message
+  function message() {
+    if    (playRound() == 'draw') {
+        return "It is a draw! Try again"
+    }
 
-//     else if (playRound() == 'win') {
-//         return "You Win!"
-//     }
+    else if (playRound() == 'win') {
+        return ("You Win! " + person + " beats " + value() + "." );
+    }
 
-//     else {
-//         return "You Lost!"
-//     }
-//   }
+    else {
+        return ("You Lost! " + value() + " beats " + person + ".");
+    }
+  }
 
-//   console.log(message());
+  console.log(message());
 
 // Ask user input
 // Check if paper, rock or scissors, or return error and prompt again.
