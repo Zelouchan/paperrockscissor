@@ -19,18 +19,18 @@ do {
 while (getHumanChoice() === 'wrong' ) 
 
 // COMPUTER CHOICE - Done
-function getComputerChoice(max) {
+function getComputerChoice() {
     return Math.floor(Math.random() * 3) + 1;
   }
 
   function value() {
-    const result = getComputerChoice();
+    const result = computerChoice;
 
-    if (result === 1)
+    if (result == 1)
         return "Paper";
-    else if (result === 2)
+    else if (result == 2)
         return "Rock";
-    else (result === 3)
+    else (result == 3)
         return "Scissors";
   }
 
@@ -60,29 +60,31 @@ function playRound() {
   const humanChoice = getHumanChoice();
   const computerChoice = getComputerChoice()
   
-//   playRound(humanChoice, computerChoice);
+  playRound(humanChoice, computerChoice);
+
 
   console.log("You played " + person);
   console.log("Computer played " + value());
 
+  console.log("You " + playRound() + "!");
 
-  // figure out how to display function in message
-  function message() {
-    if    (playRound() == 'draw') {
-        return "It is a draw! Try again"
-    }
 
-    else if (playRound() == 'win') {
-        return "You Win! person() beats value()"
-    }
+//   // figure out how to display function in message
+//   function message() {
+//     if    (playRound() == 'draw') {
+//         return "It is a draw! Try again"
+//     }
 
-    else {
-        return "You Lost! value() beats person()"
-    }
+//     else if (playRound() == 'win') {
+//         return "You Win!"
+//     }
 
-  }
+//     else {
+//         return "You Lost!"
+//     }
+//   }
 
-  console.log(message());
+//   console.log(message());
 
 // Ask user input
 // Check if paper, rock or scissors, or return error and prompt again.
