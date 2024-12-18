@@ -1,3 +1,9 @@
+
+
+let humanScore = 0;
+let computerScore = 0;
+
+
 // HUMAN CHOICE INPUT DONE
 function getHumanChoice() {
 if ( person === 'paper' ) 
@@ -23,6 +29,9 @@ function getComputerChoice() {
     return Math.floor(Math.random() * 3) + 1;
   }
 
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice()
+
   function value() {
     const result = computerChoice;
 
@@ -34,8 +43,7 @@ function getComputerChoice() {
         return "scissors";
   }
 
-let humanScore = 0;
-let computerScore = 0;
+// loop entire game
 
   // Outcome calculation DONE
 function playRound() {
@@ -57,8 +65,7 @@ function playRound() {
         return 'lose'}
   }
   
-  const humanChoice = getHumanChoice();
-  const computerChoice = getComputerChoice()
+
   
   playRound(humanChoice, computerChoice);
 
@@ -66,12 +73,10 @@ function playRound() {
   console.log("You played " + person);
   console.log("Computer played " + value());
 
-//   console.log("You " + playRound() + "!");
 
-
-  // figure out how to display function in message
+  // outcome message
   function message() {
-    if    (playRound() == 'draw') {
+    if    (playRound() == 'draw') { 
         return "It is a draw! Try again"
     }
 
@@ -84,11 +89,26 @@ function playRound() {
     }
   }
 
-  console.log(message());
 
-// Ask user input
-// Check if paper, rock or scissors, or return error and prompt again.
-// generate random choice Paper - rock - scissors
-// create random number 1-3, assign pps to number
-// compare computer choice against user choice
-  // same is draw, compare win or lose
+
+//   keeping score
+function score() {
+
+    
+if  (playRound() == 'win') {
+    return (humanScore++)
+}
+else if (playRound() == 'lose') {
+    return (computerScore++)
+}
+
+else {return}
+
+}
+
+// Console messages
+console.log(message());
+console.log("You have " + score(humanScore) + " points." );
+console.log("Computer has " + score(computerScore) + " points.");
+
+
